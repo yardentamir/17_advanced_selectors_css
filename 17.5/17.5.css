@@ -1,25 +1,39 @@
-.tooltip {
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.parg-div {
+  /* center element */
+  text-align: center;
+  position: fixed;
+  width: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.parg-div a {
+  text-decoration: none;
+  color: purple;
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
 }
 
-.tooltip .tooltiptext {
+.parg-div .tooltip-text {
   visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
+  width: 170px;
+  background-color: yellow;
   text-align: center;
-  border-radius: 6px;
+  border-radius: 15px;
   padding: 5px 0;
   position: absolute;
-  z-index: 1;
   bottom: 150%;
   left: 50%;
-  margin-left: -60px;
+  margin-left: -90px;
+  font-size: 0.8em;
 }
 
-.tooltip .tooltiptext::after {
+.parg-div .tooltip-text::after {
   content: "";
   position: absolute;
   top: 100%;
@@ -27,9 +41,22 @@
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: black transparent transparent transparent;
+  border-color: yellow transparent transparent transparent;
 }
 
-.tooltip:hover .tooltiptext {
+.parg-div a:hover .tooltip-text {
   visibility: visible;
+  animation: fadeIn 0.3s;
+}
+.tooltip a:hover {
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
