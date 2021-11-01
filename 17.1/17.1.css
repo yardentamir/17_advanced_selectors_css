@@ -1,4 +1,3 @@
-a[href="https://www.appleseeds.org.il"]::after
-{
+a::after {
   content: "website (" attr(href) ")";
 }
